@@ -8,6 +8,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 from instagrapi import Client
 
 # ================= Flask Web Server for Uptime =================
+from flask import Flask
 app_flask = Flask(__name__)
 
 @app_flask.route('/')
@@ -16,6 +17,9 @@ def home():
 
 def run_flask():
     app_flask.run(host='0.0.0.0', port=8080)
+
+app = app_flask  # <— added this line
+
 
 # =============================================================================
 
