@@ -20,11 +20,11 @@ def run_flask():
 # =============================================================================
 
 # ================= Instagram Client Setup =================
-cl = Client()
 INSTAGRAM_USERNAME = os.environ.get("IG_USERNAME")
 INSTAGRAM_PASSWORD = os.environ.get("IG_PASSWORD")
 
-print("🔐 Logging into Instagram...")
+cl = Client()
+cl.load_settings("session.json")  # Load your saved login session
 cl.login(INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD)
 print(f"✅ Logged in as @{INSTAGRAM_USERNAME}")
 
