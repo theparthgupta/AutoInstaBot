@@ -1,0 +1,4 @@
+*.pyc
+__pycache__/
+.env
+session_*   # if you create session files locally
