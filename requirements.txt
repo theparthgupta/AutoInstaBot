@@ -2,5 +2,5 @@ Flask==2.3.3
 gunicorn==20.1.0
 python-telegram-bot==20.6
 instagrapi==2.2.1
-requests==2.31.0
+requests
 boto3==1.28.0  
